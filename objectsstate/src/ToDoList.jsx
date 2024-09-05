@@ -9,16 +9,37 @@ const ToDoList = () => {
   };
 
   const addTask = () => {
-    const newTask = document.getElementById("taskInput").value;
-    setTasks((t) => [...t, newTask]);
-    setNewtTask("");
+    if (newTask !== "") {
+      setTasks((t) => [...t, newTask]);
+      setNewtTask("");
+    }
   };
 
-  const deleteTask = (index) => {};
+  const deleteTask = (index) => {
+    setTasks((t) => t.filter((_, i) => i !== index));
+  };
 
-  const moveTaskUp = (index) => {};
+  function moveTaskUp(index) {
+    if (index > 0) {
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index - 1]] = [
+        updatedTasks[index - 1],
+        updatedTasks[index],
+      ];
+      setTasks(updatedTasks);
+    }
+  }
 
-  const moveTaskDown = (index) => {};
+  const moveTaskDown = (index) => {
+    if (index < tasks.length - 1) {
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index + 1]] = [
+        updatedTasks[index + 1],
+        updatedTasks[index],
+      ];
+      setTasks(updatedTasks);
+    }
+  };
 
   return (
     <div className="listContainer">
