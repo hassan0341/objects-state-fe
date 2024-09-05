@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const MyComponent = () => {
+const ObjectState = () => {
   const [car, setCar] = useState({
     year: 2020,
     make: "lamborghini",
@@ -20,7 +20,8 @@ const MyComponent = () => {
   };
 
   return (
-    <div>
+    <div className="container">
+      <h1>Update Objects in State</h1>
       <p>
         You favourite car is a: {car.year} {car.make} {car.model}
       </p>
@@ -30,8 +31,9 @@ const MyComponent = () => {
       <br />
       <input type="text" value={car.model} onChange={handleModelChange} />
       <br />
+      <hr />
     </div>
   );
 };
 
-export default MyComponent;
+export default ObjectState;

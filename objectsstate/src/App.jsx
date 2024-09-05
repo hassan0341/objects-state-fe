@@ -1,9 +1,13 @@
-import MyComponent from "./MyComponent";
+import ObjectState from "./ObjectState";
+import ArrayState from "./ArrayState";
+import ArrOfObjState from "./ArrOfObjState";
 
 function App() {
   return (
     <>
-      <MyComponent />
+      <ObjectState />
+      <ArrayState />
+      <ArrOfObjState />
     </>
   );
 }
