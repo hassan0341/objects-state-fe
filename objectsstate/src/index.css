@@ -101,3 +101,11 @@ li {
   font-size: 1.4 rem;
   margin-left: 10px;
 }
+
+.useEffect {
+  display: none;
+}
+
+.effect-2 {
+  display: none;
+}

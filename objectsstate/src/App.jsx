@@ -3,6 +3,7 @@ import ArrayState from "./ArrayState";
 import ArrOfObjState from "./ArrOfObjState";
 import ToDoList from "./ToDoList";
 import UseEffectComponent from "./UseEffectComponent";
+import Effect2 from "./Effect2";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ArrOfObjState />
       <ToDoList />
       <UseEffectComponent />
+      <Effect2 />
     </>
   );
 }
