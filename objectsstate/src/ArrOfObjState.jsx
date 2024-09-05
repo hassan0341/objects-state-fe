@@ -15,7 +15,9 @@ const ArrOfObjState = () => {
     setCarModel("");
   };
 
-  const handleRemoveCar = (index) => {};
+  const handleRemoveCar = (i) => {
+    setCars(cars.filter((_, index) => index !== i));
+  };
 
   const handleYearChange = (event) => {
     setCarYear(event.target.value);
@@ -30,13 +32,13 @@ const ArrOfObjState = () => {
   };
 
   return (
-    <div>
+    <div className="objArrCont">
       <h1>Array Of Objects In State</h1>
       <h2>List of car objects</h2>
       <ul>
         {cars.map((car, index) => {
           return (
-            <li key={index}>
+            <li key={index} onClick={() => handleRemoveCar(index)}>
               {car.year} {car.make}, {car.model}
             </li>
           );

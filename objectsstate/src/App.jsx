@@ -1,6 +1,7 @@
 import ObjectState from "./ObjectState";
 import ArrayState from "./ArrayState";
 import ArrOfObjState from "./ArrOfObjState";
+import ToDoList from "./ToDoList";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <ObjectState />
       <ArrayState />
       <ArrOfObjState />
+      <ToDoList />
     </>
   );
 }
